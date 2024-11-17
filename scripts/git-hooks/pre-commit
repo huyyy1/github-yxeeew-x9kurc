@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Run environment validation
+npm run env:validate
+
+# Run type checking
+npm run type-check
+
+# Run linting
+npm run lint
+
+# Exit with error if any check fails
+if [ $? -ne 0 ]; then
+  echo "❌ Pre-commit checks failed"
+  exit 1
+fi
+
+exit 0

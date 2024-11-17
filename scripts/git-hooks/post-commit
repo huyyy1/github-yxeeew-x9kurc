@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Backup environment variables after commit
+npm run env:backup
+
+exit 0
